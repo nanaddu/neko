@@ -1,0 +1,331 @@
+[
+  {
+    "id": "music19",
+    "singer": "RIIZE",
+    "name": "Inside My Love",
+    "src": "./music/riizeinsidemylove.mp3",
+    "imgsrc": "./images/riizeinsidemylove.jpg"
+  },
+  {
+    "id": "music5",
+    "singer": "ATEEZ",
+    "name": "WAVE",
+    "src": "./music/ateezWave.mp3",
+    "imgsrc": "./images/ateezWave.png"
+  },
+  {
+    "id": "music20",
+    "singer": "ARI HICKS",
+    "name": "Kiss Me, Kill Me",
+    "src": "./music/arihickskissmekillme.mp3",
+    "imgsrc": "./images/arihickskissmekillme.jpg"
+  },
+  {
+    "id": "music21",
+    "singer": "CARLY RAE JEPSEN",
+    "name": "I Really Like You",
+    "src": "./music/CarlyRaeJepsenIReallyLikeYou.mp3",
+    "imgsrc": "./images/CarlyRaeJepsenIReallyLikeYou.jpg"
+  },
+  {
+    "id": "music24",
+    "singer": "FIFTY FIFTY",
+    "name": "Pookie",
+    "src": "./music/fiftyfiftypookie.mp3",
+    "imgsrc": "./images/fiftyfiftypookie.jpg"
+  },
+  {
+    "id": "music25",
+    "singer": "FIFTY FIFTY",
+    "name": "Gravity",
+    "src": "./music/fiftyfiftygravity.mp3",
+    "imgsrc": "./images/fiftyfiftygravity.jpg"
+  },
+  {
+    "id": "music26",
+    "singer": "Marc E. Bassy",
+    "name": "Bondage",
+    "src": "./music/bondage.mp3",
+    "imgsrc": "./images/bondage.jpg"
+  },
+  {
+    "id": "music27",
+    "singer": "Zack Tabudlo",
+    "name": "Give Me Your Forever",
+    "src": "./music/givemeyourforever.mp3",
+    "imgsrc": "./images/givemeyourforever.jpg"
+  },
+  {
+    "id": "music28",
+    "singer": "오마이걸(OH MY GIRL)",
+    "name": "Je T'aime",
+    "src": "./music/Jetaime.mp3",
+    "imgsrc": "./images/Jetaime.jpg"
+  },
+  {
+    "id": "music39",
+    "singer": "오마이걸(OH MY GIRL)",
+    "name": "NE♡N",
+    "src": "./music/neon.mp3",
+    "imgsrc": "./images/neon.jpg"
+  },
+  {
+    "id": "music29",
+    "singer": "보아(BoA)",
+    "name": "Like I Like",
+    "src": "./music/likeilike.mp3",
+    "imgsrc": "./images/likeilike.jpg"
+  },
+  {
+    "id": "music40",
+    "singer": "보아(BoA)",
+    "name": "Like It!",
+    "src": "./music/likeit.mp3",
+    "imgsrc": "./images/likeit.jpg"
+  },
+  {
+    "id": "music41",
+    "singer": "보아(BoA)",
+    "name": "홧김에 (Irreversible)",
+    "src": "./music/Irreversible.mp3",
+    "imgsrc": "./images/likeit.jpg"
+  },
+  {
+    "id": "music30",
+    "singer": "효린",
+    "name": "이게 사랑이지 뭐야",
+    "src": "./music/love.mp3",
+    "imgsrc": "./images/love.jpg"
+  },
+  {
+    "id": "music51",
+    "singer": "효린",
+    "name": "Love Like This (Feat. Dok2)",
+    "src": "./music/lovelikethis.mp3",
+    "imgsrc": "./images/lovelikethis.jpg"
+  },
+  {
+    "id": "music31",
+    "singer": "PL(피엘)",
+    "name": "MALIBU",
+    "src": "./music/malibu.mp3",
+    "imgsrc": "./images/malibu.jpg"
+  },
+  {
+    "id": "music32",
+    "singer": "Billie Marten",
+    "name": "MICE",
+    "src": "./music/mice.mp3",
+    "imgsrc": "./images/mice.jpg"
+  },
+  {
+    "id": "music33",
+    "singer": "로제(ROSÉ)",
+    "name": "number one girl",
+    "src": "./music/numberonegirl.mp3",
+    "imgsrc": "./images/numberonegirl.jpg"
+  },
+  {
+    "id": "music34",
+    "singer": "Finn Askew",
+    "name": "Roses",
+    "src": "./music/rose.mp3",
+    "imgsrc": "./images/rose.jpg"
+  },
+  {
+    "id": "music35",
+    "singer": "수지(SUZY)",
+    "name": "SObeR",
+    "src": "./music/sober.mp3",
+    "imgsrc": "./images/sober.jpg"
+  },
+  {
+    "id": "music36",
+    "singer": "웬디(WENDY)",
+    "name": "Vermilion",
+    "src": "./music/vermilion.mp3",
+    "imgsrc": "./images/vermilion.jpg"
+  },
+  {
+    "id": "music37",
+    "singer": "원위(ONEWE)",
+    "name": "베로니카의 섬",
+    "src": "./music/veronica.mp3",
+    "imgsrc": "./images/veronica.jpg"
+  },
+  {
+    "id": "music38",
+    "singer": "태연(TAEYEON)",
+    "name": "weekend",
+    "src": "./music/weekend.mp3",
+    "imgsrc": "./images/weekend.jpg"
+  },
+  {
+    "id": "music42",
+    "singer": "DAY6(데이식스)",
+    "name": "365247",
+    "src": "./music/365247.mp3",
+    "imgsrc": "./images/365247.jpg"
+  },
+  {
+    "id": "music43",
+    "singer": "아이유(IU)",
+    "name": "Love wins all",
+    "src": "./music/lovewinsall.mp3",
+    "imgsrc": "./images/lovewinsall.jpg"
+  },
+  {
+    "id": "music44",
+    "singer": "알레프(ALEPH)",
+    "name": "No One Told Me Why",
+    "src": "./music/noonetoldmewhy.mp3",
+    "imgsrc": "./images/noonetoldmewhy.jpg"
+  },
+  {
+    "id": "music56",
+    "singer": "태민(TAEMIN)",
+    "name": "안아줄래",
+    "src": "./music/thinkofyou.mp3",
+    "imgsrc": "./images/thinkofyou.jpg"
+  },
+  {
+    "id": "music45",
+    "singer": "태민(TAEMIN)",
+    "name": "Rise(이카루스)",
+    "src": "./music/rise.mp3",
+    "imgsrc": "./images/rise.jpg"
+  },
+  {
+    "id": "music46",
+    "singer": "이채연",
+    "name": "Dreaming",
+    "src": "./music/dreaming.mp3",
+    "imgsrc": "./images/dreaming.jpg"
+  },
+  {
+    "id": "music47",
+    "singer": "FKJ",
+    "name": "Lying Together",
+    "src": "./music/lyingtogether.mp3",
+    "imgsrc": "./images/lyingtogether.jpg"
+  },
+  {
+    "id": "music49",
+    "singer": "Etham",
+    "name": "I Wish It Was Me",
+    "src": "./music/iwishitwasme.mp3",
+    "imgsrc": "./images/iwishitwasme.jpg"
+  },
+  {
+    "id": "music50",
+    "singer": "Ariana Grande",
+    "name": "34+35",
+    "src": "./music/3435.mp3",
+    "imgsrc": "./images/3435.jpg"
+  },
+  {
+    "id": "music52",
+    "singer": "Red Velvet(레드벨벳)",
+    "name": "Blue Lemonade",
+    "src": "./music/bluelemonade.mp3",
+    "imgsrc": "./images/bluelemonade.jpg"
+  },
+  {
+    "id": "music53",
+    "singer": "TWICE(트와이스)",
+    "name": "YOU GET ME",
+    "src": "./music/yougetme.mp3",
+    "imgsrc": "./images/yougetme.jpg"
+  },
+  {
+    "id": "music54",
+    "singer": "10CM",
+    "name": "Where Is Dream",
+    "src": "./music/whereisdream.mp3",
+    "imgsrc": "./images/whereisdream.jpg"
+  },
+  {
+    "id": "music55",
+    "singer": "이바다",
+    "name": "토닥토닥",
+    "src": "./music/patpat.mp3",
+    "imgsrc": "./images/patpat.jpg"
+  },
+  {
+    "id": "music57",
+    "singer": "신해철",
+    "name": "일상으로의 초대",
+    "src": "./music/dlftkd.mp3",
+    "imgsrc": "./images/dlftkd.jpg"
+  },
+  {
+    "id": "music59",
+    "singer": "NMIXX",
+    "name": "BEAT BEAT",
+    "src": "./music/beatbeat.mp3",
+    "imgsrc": "./images/beatbeat.jpg"
+  },
+  {
+    "id": "music60",
+    "singer": "Anonymous Artists",
+    "name": "Comfort Zone",
+    "src": "./music/comfortzone.mp3",
+    "imgsrc": "./images/comfortzone.jpg"
+  },
+  {
+    "id": "music61",
+    "singer": "STAYC(스테이씨)",
+    "name": "247",
+    "src": "./music/247.mp3",
+    "imgsrc": "./images/247.jpg"
+  },
+  {
+    "id": "music62",
+    "singer": "골든차일드",
+    "name": "Fantasia (Y Solo)",
+    "src": "./music/fantasia.mp3",
+    "imgsrc": "./images/fantasia.jpg"
+  },
+  {
+    "id": "music63",
+    "singer": "펀치넬로(punchnello)",
+    "name": "Blue Hawaii",
+    "src": "./music/bluehawaii.mp3",
+    "imgsrc": "./images/bluehawaii.jpg"
+  },
+  {
+    "id": "music64",
+    "singer": "Jax Jones(잭스 존스)",
+    "name": "Instruction",
+    "src": "./music/instruction.m4a",
+    "imgsrc": "./images/instruction.jpg"
+  },
+  {
+    "id": "music58",
+    "singer": "오하영 (에이핑크)",
+    "name": "Don’t Make Me Laugh",
+    "src": "./music/laugh.mp3",
+    "imgsrc": "./images/laugh.jpg"
+  },
+  {
+    "id": "music48",
+    "singer": "Tove Lo(토브 로)",
+    "name": "disco tits",
+    "src": "./music/discotits.mp3",
+    "imgsrc": "./images/discotits.jpg"
+  },
+  {
+    "id": "music65",
+    "singer": "드림캐쳐",
+    "name": "Mayday",
+    "src": "./music/mayday.mp3",
+    "imgsrc": "./images/mayday.jpg"
+  },
+  {
+    "id": "music66",
+    "singer": "YENA (최예나)",
+    "name": "364",
+    "src": "./music/364.mp3",
+    "imgsrc": "./images/364.jpg"
+  }
+]

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <script src="https://kit.fontawesome.com/310cc39efe.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    <link rel="icon" type="image/png" href="./favicon.png" />
+
+    <title>Think Of You</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <section id="wrapBox" class="wrapBox">
+        <section id="lyricsOverlay" class="lyricsOverlay">
+            <section class="overlayContent">
+                <p id="closeOverlay" class="closeOverlay"><i class="fa-solid fa-xmark"></i></p>
+                <section id="fullLyricsArea" class="fullLyricsArea">
+                    <p class="lyricstitleName" id="lyricstitleName">TITLE</p>
+                    <p class="lyricsartistName" id="lyricsartistName">ARTIST</p>
+                </section>
+            </section>
+            <section class="lyricsBox" id="lyricsBox">
+
+            </section>
+        </section>
+        <section id="header" class="header">
+            <p class="underBtn" id="underBtn"><i class="fa-solid fa-heart"></i></p>
+            <p id="gearIcon" class="themaBtn"><i class="fa-solid fa-angle-down"></i></p>
+            <div id="themePopup" class="theme-popup hidden">
+                <p class="popup-title"><i class="fa-solid fa-palette"></i> Theme Settings</p>
+                <div class="theme-options">
+                    <div>
+                        <button class="theme-btn" data-color="#C94141" style="background:#C94141;"></button>
+                        <button class="theme-btn" data-color="#f18657" style="background:#f18657;"></button>
+                        <button class="theme-btn" data-color="#ffa93a" style="background:#ffa93a;"></button>
+                        <button class="theme-btn" data-color="#82a571" style="background:#82a571;"></button>
+                        <button class="theme-btn" data-color="#527198" style="background:#527198;"></button>
+                        <button class="theme-btn" data-color="#9891c1" style="background:#9891c1;"></button>
+                        <button class="theme-btn" data-color="#ffa4ba" style="background:#ffa4ba;"></button>
+                    </div>
+                    <div>
+                        <button class="theme-btn" data-color="#ffcc66" style="background:#ffcc66;"></button>
+                        <button class="theme-btn" data-color="#ccff33" style="background:#ccff33;"></button>
+                        <button class="theme-btn" data-color="#00b8d2" style="background:#00b8d2;"></button>
+                        <button class="theme-btn" data-color="#ff6bc8" style="background:#ff6bc8;"></button>
+                        <button class="theme-btn" data-color="#af7bee" style="background:#af7bee;"></button>
+                        <button class="theme-btn" data-color="#af1f2f" style="background:#af1f2f;"></button>
+                        <button class="theme-btn" data-color="#ff6506" style="background:#ff6506;"></button>
+                    </div>
+                </div>
+                <p><i class="fa-solid fa-sun"></i> Thema Mods</p>
+                <section id="themaBtn" class="themaBtn">
+                    <p class="nightBtn" id="nightBtn"><i class="fa-solid fa-sun"></i></p>
+                    <p class="dayBtn" id="dayBtn"><i class="fa-solid fa-moon"></i></p>
+                </section>
+                <p><i class="fa-solid fa-star"></i> Favorite List</p>
+                <section id="favoriteBtn" class="favoriteBtn">
+                    <p id="openFavoriteBtn"><i class="fa-solid fa-star"></i></p>
+                </section>
+            </div>
+        </section>
+        <section id="titleArea" class="titleArea">
+            <p class="titleName" id="titleName">TITLE</p>
+            <p class="artistName" id="artistName">ARTIST</p>
+        </section>
+        <section id="albumCover" class="albumCover">
+            <article id="coverImg" class="coverImg">
+            </article>
+        </section>
+        <section id="lyrics" class="lyrics">
+            <article id="lyricsArea" class="lyricsArea"></article>
+        </section>
+        <section id="playTimeArea" class="playTimeArea">
+            <p class="playTime" id="playTime">0:00</p>
+            <p class="fullTime" id="fullTime">3:28</p>
+        </section>
+        <section id="playRange" class="playRange">
+            <article id="playArea" class="playArea"></article>
+            <input type="range" id="audioRange" value="0" min="0" max="100" class="inputRange">
+        </section>
+        <section id="btnArea" class="btnArea">
+            <article id="btnAll" class="btnAll">
+                <p class="ranBtn" id="ranBtn"><i class="fa-solid fa-shuffle"></i></p>
+                <p class="prevBtn" id="prevBtn"><i class="fa-solid fa-backward-step"></i></p>
+                <p class="playPauseContainer">
+                    <i class="fa-solid fa-play" id="playBtn"></i>
+                    <i class="fa-solid fa-pause" id="pauseBtn"></i>
+                </p>
+                <p class="nextBtn" id="nextBtn"><i class="fa-solid fa-forward-step"></i></p>
+                <p class="repeatBtn" id="repeatBtn"><i class="fa-solid fa-repeat"></i></p>
+            </article>
+        </section>
+        <section id="playList" class="playList">
+            <article id="playListName" class="playListName">
+                <p class="backBtn" id="backBtn"><i class="fa-solid fa-angle-left"></i></p>
+                <p class="nameArea" id="nameArea">재생목록</p>
+            </article>
+            <article id="listArea" class="listArea">
+                <ul id="songList">
+
+                </ul>
+            </article>
+        </section>
+        <section id="favoriteList" class="playList">
+                <article class="playListName">
+                    <p class="backBtn" id="favBackBtn"><i class="fa-solid fa-angle-left"></i></p>
+                    <p class="nameArea">즐겨찾기</p>
+                </article>
+                <article class="listArea">
+                    <ul id="favoriteSongList"></ul>
+                </article>
+            </section>
+    </section>
+    <script src="music.js"></script>
+</body>
+
+</html>

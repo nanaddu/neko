@@ -1,0 +1,775 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Timmana&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Passion+One:wght@400;700;900&display=swap');
+
+
+/* font-family: "Ubuntu", sans-serif;
+  font-weight: 700; 3 , 4 , 5 , 7
+
+  font-family: "Timmana", sans-serif;
+  font-weight: 400;
+
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400; 
+  
+  .noto-sans-kr-<uniquifier> {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(var(--vh, 1vh) * 100);
+    font-size: 10px;
+    list-style: none;
+    overflow: hidden;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+:root {
+    --theme-color: #ffa4ba;
+    /* 기본 테마 색상 */
+}
+
+html.night,
+body.night {
+    background-color: #222;
+    color: #fff;
+}
+
+body.night .wrapBox {
+    background-color: #000;
+    color: #fff;
+}
+
+body.night .playList {
+    background-color: #000;
+    color: #fff;
+}
+
+body.night .listArea {
+    background-color: #000;
+    color: #fff;
+}
+
+body.night .underBtn {
+    color: #fff;
+}
+
+body.night .titleName,
+body.night .artistName {
+    color: #fff;
+}
+
+body.night .lyrics {
+    background-color: #222;
+    color: var(--theme-color);
+}
+
+body.night .lyricsOverlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+body.night .overlayContent {
+    color: #fff;
+}
+
+body.night .closeOverlay {
+    color: #fff;
+}
+
+body.night .lyricsartistName {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+body.night .lyricsBox {
+    color: #fff;
+}
+
+body.night #lyricsBox {
+    color: #fff;
+}
+
+body.night .theme-popup {
+    background: #000;
+}
+
+body.night .theme-popup>p {
+    color: #fff;
+}
+
+body.night .dayBtn {
+    color: #fff;
+}
+
+body.night .nightBtn {
+    color: #fff;
+}
+
+/* 비활성 상태 색 (라이트 모드) */
+.ranBtn,
+.repeatBtn {
+    color: #000;
+}
+
+/* 활성 상태 색 (라이트 모드) */
+.ranBtn.is-active,
+.repeatBtn.is-active {
+    color: var(--theme-color);
+}
+
+/* 비활성 상태 색 (다크 모드) */
+body.night .ranBtn,
+body.night .repeatBtn {
+    color: #fff;
+}
+
+/* 활성 상태 색 (다크 모드) */
+body.night .ranBtn.is-active,
+body.night .repeatBtn.is-active {
+    color: var(--theme-color);
+}
+
+.themaBtn {
+    font-size: 2.5rem;
+    display: flex;
+    gap: 10px;
+}
+
+.dayBtn {
+    color: #000;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.nightBtn {
+    color: #000;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.theme-popup {
+    width: 230px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 10000;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.theme-popup>p {
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+    line-height: 20px;
+    color: #000;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.theme-popup>.popup-title {
+    margin-bottom: 5px;
+}
+
+.theme-options {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.theme-btn {
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.favoriteBtn {
+    font-size: 2.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.wrapBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 380px;
+    width: 600px;
+    height: 660px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.lyricsOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 10;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.lyricsOverlay.active {
+    display: flex;
+}
+
+.overlayContent {
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.closeOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2.5rem;
+    color: #000;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.lyricstitleName {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.lyricsartistName {
+    font-size: 1.1rem;
+    color: #111;
+}
+
+.lyricsBox {
+    width: 100%;
+    max-width: 400px;
+    height: 80%;
+    overflow-y: auto;
+    padding: 20px;
+    color: #000;
+    border-radius: 10px;
+    box-sizing: border-box;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 40px;
+    white-space: pre-wrap;
+    /* 줄바꿈 유지 */
+    text-align: center;
+    position: relative;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.lyricsBox::-webkit-scrollbar {
+    display: none;
+}
+
+#lyricsBox p.activeLyric {
+    color: var(--theme-color);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#lyricsBox {
+    color: #000;
+}
+
+.header {
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.underBtn,
+.homeBtn {
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.titleArea {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titleName {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.artistName {
+    font-size: 1.1rem;
+    color: #111;
+}
+
+.albumCover {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.coverImg>img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+#albumCover.zoomed {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 10;
+    transition: transform 0.3s, top 0.3s, left 0.3s;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+#albumCover.zoomed-behind {
+    transform: scale(3.5);
+    filter: blur(2px);
+    transition: transform 0.4s ease, filter 0.4s ease;
+    z-index: 5;
+}
+
+body.cover-zoomed::before {
+    content: '';
+    position: absolute;
+    /* WrapBox 기준 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 5;
+}
+
+.lyrics {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    height: 44rem;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: var(--theme-color);
+    line-height: 2rem;
+    text-align: center;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.lyricsArea {
+    width: 100%;
+}
+
+.playTimeArea {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.playRange {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.playRange input[type="range"] {
+    width: 100%;
+}
+
+.btnArea {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.btnAll {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.playPauseContainer,
+.volumeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.playBtn,
+.pauseBtn,
+.unmute,
+.mute {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.playPauseContainer .pauseBtn,
+.volumeContainer .mute {
+    display: none;
+}
+
+.activeSong {
+    background-color: var(--theme-color);
+}
+
+.favoriteList {
+    max-width: 400px;
+    width: 600px;
+    height: 660px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s;
+    z-index: 999;
+}
+
+.favoriteList.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.fav-icon {
+    line-height: 50px;
+    font-size: 20px;
+    color: #000;
+    transition: color 0.2s ease;
+}
+
+body.night .fav-icon {
+    font-size: 20px;
+    color: #fff;
+    /* 기본 회색 */
+    transition: color 0.2s ease;
+}
+
+.fav-icon.active {
+    color: var(--theme-color);
+    /* 선택 시 테마 색상 사용 */
+}
+
+body.night .fav-icon.active {
+    color: var(--theme-color);
+    /* 선택 시 테마 색상 사용 */
+}
+
+@media (max-width: 768px) {
+    .wrapBox {
+        max-width: 380px;
+        padding: 20px;
+    }
+
+    /* .header,
+    .playTimeArea,
+    .btnArea {
+        padding: 0 10px;
+    } */
+
+    .header {
+        margin-bottom: 0px;
+    }
+
+    .titleName {
+        font-size: 1.5rem;
+    }
+
+    .artistName {
+        font-size: 0.9rem;
+    }
+
+    .coverImg img {
+        max-width: 340px;
+    }
+
+    /* .btnAll {
+        justify-content: space-around;
+    } */
+
+    .lyrics {
+        max-width: 340px;
+        height: 4rem;
+        padding: 8px;
+    }
+
+    .lyricsArea {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.btnAll p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+
+.playList {
+    max-width: 400px;
+    width: 600px;
+    height: 660px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s;
+    z-index: 999;
+}
+
+.playList.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.playListName {
+    display: flex;
+    align-items: center;
+}
+
+.backBtn>i {
+    font-size: 2rem;
+    padding: 20px 10px;
+    cursor: pointer;
+}
+
+.nameArea {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px 30px;
+}
+
+.listArea ul {
+    height: 600px;
+    overflow-y: scroll;
+}
+
+.listArea ul::-webkit-scrollbar {
+    display: none;
+}
+
+
+.listArea li {
+    padding: 5px 20px 5px 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.listArea li:hover {
+    background-color: var(--theme-color);
+}
+
+.listArea li img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.listType {
+    display: flex;
+    flex-direction: column;
+}
+
+.listType p {
+    padding: 5px 5px 5px 10px;
+    font-size: 1.2rem;
+}
+
+input[type="range"] {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    /*  slider progress trick  */
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+/* Track: webkit browsers */
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 15px;
+    background: #eee;
+    border-radius: 16px;
+}
+
+/* Track: Mozilla Firefox */
+input[type="range"]::-moz-range-track {
+    height: 15px;
+    background: #eee;
+    border-radius: 16px;
+}
+
+/* Thumb: webkit */
+input[type="range"]::-webkit-slider-thumb {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    height: 15px;
+    width: 15px;
+    background-color: var(--theme-color);
+    border-radius: 50%;
+    border: 2px solid var(--theme-color);
+    box-shadow: -407px 0 0 400px var(--theme-color);
+}
+
+
+/* Thumb: Firefox */
+input[type="range"]::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    background-color: var(--theme-color);
+    border-radius: 50%;
+    border: 1px solid var(--theme-color);
+    /*  slider progress trick  */
+    box-shadow: -407px 0 0 400px var(--theme-color);
+}
+
+@media (max-width: 400px) {
+    .wrapBox {
+        max-width: 320px;
+        /* padding: 10px; */
+    }
+
+    .header {
+        max-width: 320px;
+        margin-bottom: 20px;
+    }
+
+    .titleName {
+        font-size: 1.5rem;
+    }
+
+    .artistName {
+        font-size: 0.9rem;
+    }
+
+    .coverImg img {
+        max-width: 280px;
+    }
+
+    .btnAll {
+        justify-content: space-between;
+    }
+
+    .lyrics {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        max-width: 280px;
+        height: 4rem;
+        padding: 8px;
+    }
+
+    .lyricsArea {
+        width: 100%;
+        text-align: center;
+    }
+
+    .playList {
+        max-width: 320px;
+        width: 600px;
+        height: 660px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s;
+        z-index: 999;
+    }
+
+    .playList.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .listArea li {
+        padding: 5px 5px 5px 10px;
+        transition: 0.5s;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+}
