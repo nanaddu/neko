@@ -327,5 +327,12 @@
     "name": "364",
     "src": "./music/364.mp3",
     "imgsrc": "./images/364.jpg"
+  },
+  {
+    "id": "music67",
+    "singer": "다영 (DAYOUNG)",
+    "name": "body",
+    "src": "./music/body.mp3",
+    "imgsrc": "./images/body.jpg"
   }
 ]
