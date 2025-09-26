@@ -1,3 +1,23 @@
+import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
+
+// Firestore 인스턴스
+const db = getFirestore();
+
+// 사용자 ID 지정 (친구 전용 사이트니까 고정값 사용)
+const myUserId = 'friend1';  // 👈 친구에게는 이걸로 고정
+
+// 좋아요 저장 함수
+async function saveFavoriteSongs(userId, favoriteSongs) {
+  try {
+    await setDoc(doc(db, "users", userId), {
+      favoriteSongs: favoriteSongs
+    });
+    console.log(`[Firebase] 저장 완료 (${userId}):`, favoriteSongs);
+  } catch (error) {
+    console.error("Firebase 저장 오류:", error);
+  }
+}
+
 let musicList = [];
 let currentMusic = null;
 let currentAudio = null;
@@ -302,6 +322,10 @@ function renderSongList() {
             }
 
             localStorage.setItem('favoriteSongs', JSON.stringify(favoriteSongs));
+
+            // 🔥 Firebase에 저장하기
+            saveFavoriteSongs(myUserId, favoriteSongs);
+            
             renderSongList();       // 전체 목록 갱신
             renderFavoriteList();   // 즐겨찾기 목록 갱신
         });
